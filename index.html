@@ -2133,24 +2133,26 @@
                 </a>
             </div>
             <div>
-                <form class="contact-form" onsubmit="handleContact(event)">
+                <div data-fs-success style="font-size:0.82rem;color:#50fa7b;display:none;margin-bottom:1rem">Thanks! Your message has been sent successfully.</div>
+                <div data-fs-error style="font-size:0.82rem;color:#ff5555;display:none;margin-bottom:1rem">There was an error sending your message. Please try again.</div>
+
+                <form class="contact-form" id="my-form">
                     <div class="form-group">
                         <label class="form-label" for="cf-name">Name</label>
-                        <input type="text" class="form-input" placeholder="Your name" id="cf-name" required>
+                        <input type="text" class="form-input" placeholder="Your name" id="cf-name" name="name" required data-fs-field>
+                        <span data-fs-error="name" style="font-size:0.75rem;color:#ff5555;display:block;margin-top:0.3rem"></span>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="cf-email">Email</label>
-                        <input type="email" class="form-input" placeholder="your@email.com" id="cf-email" required>
+                        <input type="email" class="form-input" placeholder="your@email.com" id="cf-email" name="email" required data-fs-field>
+                        <span data-fs-error="email" style="font-size:0.75rem;color:#ff5555;display:block;margin-top:0.3rem"></span>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="cf-msg">Message</label>
-                        <textarea class="form-textarea" placeholder="Let's work together..." id="cf-msg"
-                            required></textarea>
+                        <textarea class="form-textarea" placeholder="Let's work together..." id="cf-msg" name="message" required data-fs-field></textarea>
+                        <span data-fs-error="message" style="font-size:0.75rem;color:#ff5555;display:block;margin-top:0.3rem"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <div id="cf-status" style="font-size:0.82rem;color:var(--blue);display:none;margin-top:0.5rem">
-                        Opening your
-                        email app...</div>
+                    <button type="submit" class="btn btn-primary" data-fs-submit-btn>Send Message</button>
                 </form>
             </div>
         </div>
@@ -2910,23 +2912,7 @@ void main(){
                 document.getElementById('gh-stars').textContent = stars;
             }).catch(() => { });
 
-        // Contact form
-        function handleContact(e) {
-            e.preventDefault();
-            const name = document.getElementById('cf-name').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const msg = document.getElementById('cf-msg').value.trim();
-            if (!name || !email || !msg) return;
-            const s = document.getElementById('cf-status');
-            s.style.display = 'block';
-            const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
-            window.location.href = `mailto:kushalrongali8@gmail.com?subject=${subject}&body=${body}`;
-            document.getElementById('cf-name').value = '';
-            document.getElementById('cf-email').value = '';
-            document.getElementById('cf-msg').value = '';
-            setTimeout(() => s.style.display = 'none', 4000);
-        }
+        // Contact form logic is handled by Formspree JS library
 
         // ============================================================
         // OrbitImages — vanilla JS port (React Bits / motion)
@@ -3256,6 +3242,11 @@ void main(){
 
         })();
     </script>
+    <script>
+      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+      formspree('initForm', { formElement: '#my-form', formId: 'meewelnr' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 
 </html>
