@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#050508">
     <title>Kushal Rongali — AI Engineer & Full Stack Developer</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet">
     <style>
         :root {
@@ -395,144 +395,9 @@
         /* ABOUT */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
+            grid-template-columns: 1fr 1fr;
             gap: 5rem;
-            align-items: start;
-        }
-
-        .about-profile-card {
-            background: rgba(10, 10, 20, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 2.2rem;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile-card-badge {
-            display: inline-block;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--blue);
-            background: rgba(0, 170, 255, 0.1);
-            border: 1px solid rgba(0, 170, 255, 0.2);
-            padding: 0.3rem 0.75rem;
-            border-radius: 100px;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-        }
-
-        .profile-card-name {
-            font-family: 'Instrument Serif', serif;
-            font-size: 2.6rem;
-            font-style: italic;
-            font-weight: 500;
-            line-height: 1.1;
-            margin-bottom: 0.2rem;
-            color: var(--white);
-        }
-
-        .profile-card-role {
-            font-family: 'Space Mono', monospace;
-            font-size: 0.72rem;
-            letter-spacing: 0.08em;
-            color: rgba(240, 240, 245, 0.4);
-            text-transform: uppercase;
-            margin-bottom: 1.8rem;
-        }
-
-        .profile-image-container {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 1.5rem;
-        }
-
-        .profile-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            filter: grayscale(1) contrast(1.05);
-            transition: filter 0.3s ease, transform 0.5s ease;
-        }
-
-        .profile-image-container:hover img {
-            filter: grayscale(0) contrast(1);
-            transform: scale(1.02);
-        }
-
-        .profile-image-overlay {
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-            right: 1rem;
-            background: rgba(5, 5, 8, 0.75);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 100px;
-            padding: 0.5rem 0.75rem 0.5rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .status-indicator {
-            font-family: 'Space Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .status-indicator .dot {
-            width: 6px;
-            height: 6px;
-            background: #50fa7b;
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 8px #50fa7b;
-            animation: blink 2s infinite;
-        }
-
-        .overlay-contact-btn {
-            font-family: 'Space Mono', monospace;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #000;
-            background: var(--white);
-            border: none;
-            padding: 0.3rem 0.8rem;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-
-        .overlay-contact-btn:hover {
-            background: var(--blue);
-            transform: scale(1.05);
-        }
-
-        .profile-card-footer-name {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.8rem;
-            font-style: italic;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.25);
-            text-align: left;
-        }
-
-        .about-text-and-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 2.2rem;
+            align-items: start
         }
 
         .about-text p {
@@ -543,19 +408,15 @@
             margin-bottom: 1.5rem;
         }
 
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
-
         .about-text p strong {
             color: #fff;
-            font-weight: 500;
+            font-weight: 500
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 1rem
         }
 
         .stat-card {
@@ -568,7 +429,7 @@
 
         .stat-card:hover {
             border-color: rgba(0, 170, 255, 0.4);
-            transform: translateY(-3px);
+            transform: translateY(-3px)
         }
 
         .stat-num {
@@ -583,7 +444,7 @@
         .stat-label {
             font-size: 0.82rem;
             color: var(--text-muted);
-            font-weight: 400;
+            font-weight: 400
         }
 
         /* SKILLS — OrbitImages */
@@ -1773,57 +1634,37 @@
         <div class="section-label">01 / About</div>
         <h2 class="section-title">Who I <em>Am</em></h2>
         <div class="about-grid">
-            <!-- Left Side: Profile Photo Card (Reference Visual) -->
-            <div class="about-profile-card">
-                <div class="profile-card-badge">AI/ML &amp; FULL STACK DEVELOPER STUDENT</div>
-                <h3 class="profile-card-name">Kushal Rongali</h3>
-                <div class="profile-card-role">AI &amp; FULL STACK DEVELOPER</div>
-                
-                <div class="profile-image-container">
-                    <img src="assets/profile.jpg" alt="Kushal Rongali Profile Photo">
-                    <div class="profile-image-overlay">
-                        <span class="status-indicator"><span class="dot"></span> @kushalrongali Available</span>
-                        <a href="#contact" class="overlay-contact-btn">Contact</a>
-                    </div>
-                </div>
-                
-                <h4 class="profile-card-footer-name">Kushal Rongali</h4>
+            <div class="about-text">
+                <p>I'm a <strong>Computer Science student specializing in Artificial Intelligence</strong> at Parul
+                    University,
+                    Vadodara. Passionate about building scalable web applications, AI-powered solutions, and solving
+                    real-world
+                    problems through technology.</p>
+                <p>My interests span <strong>Full Stack Development</strong>, <strong>Artificial Intelligence</strong>,
+                    <strong>Cloud Computing</strong>, and <strong>Software Engineering</strong>. I thrive at the
+                    intersection of
+                    intelligent systems and modern web architecture.
+                </p>
+                <p>When I'm not writing code, I'm grinding LeetCode, exploring open-source projects, or deep-diving into
+                    AI
+                    research papers.</p>
             </div>
-
-            <!-- Right Side: Original Content and Statistics -->
-            <div class="about-text-and-stats">
-                <div class="about-text">
-                    <p>I'm a <strong>Computer Science student specializing in Artificial Intelligence</strong> at Parul
-                        University,
-                        Vadodara. Passionate about building scalable web applications, AI-powered solutions, and solving
-                        real-world
-                        problems through technology.</p>
-                    <p>My interests span <strong>Full Stack Development</strong>, <strong>Artificial Intelligence</strong>,
-                        <strong>Cloud Computing</strong>, and <strong>Software Engineering</strong>. I thrive at the
-                        intersection of
-                        intelligent systems and modern web architecture.
-                    </p>
-                    <p>When I'm not writing code, I'm grinding LeetCode, exploring open-source projects, or deep-diving into
-                        AI
-                        research papers.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-num" data-target="100">0</span>+
+                    <span class="stat-label">LeetCode Problems</span>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="100">0</span>+
-                        <span class="stat-label">LeetCode Problems</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="2">0</span>+
-                        <span class="stat-label">Major Projects</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">MERN</span>
-                        <span class="stat-label">Stack Developer</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">AI</span>
-                        <span class="stat-label">Enthusiast</span>
-                    </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="2">0</span>+
+                    <span class="stat-label">Major Projects</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">MERN</span>
+                    <span class="stat-label">Stack Developer</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">AI</span>
+                    <span class="stat-label">Enthusiast</span>
                 </div>
             </div>
         </div>
@@ -1937,8 +1778,8 @@
                 <div class="pd-links">
                     <a href="https://skillsense.kushalrongali.online" target="_blank" rel="noopener noreferrer"
                         class="pd-link pl-demo">Project Link</a>
-                    <a href="https://github.com/kushalrongali/SkillSense-AI.git" target="_blank" rel="noopener noreferrer"
-                        class="pd-link pl-gh">GitHub</a>
+                    <a href="https://github.com/kushalrongali/SkillSense-AI.git" target="_blank"
+                        rel="noopener noreferrer" class="pd-link pl-gh">GitHub</a>
                 </div>
             </article>
         </div>
